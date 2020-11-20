@@ -11,22 +11,26 @@ $(document).ready(function() {
       .then(function(response) {
         let amount = parseInt($('#amount').val());
         let usdTo = $("select#convertTo").val();
-        if (usdTo === "DKK") {
-          let final = (amount * response.conversion_rates.DKK);
-          $('#results').text(`$ ${amount} USD is equal to ${final} DKK`);
-        } else if (usdTo === "IDR") {
-          let final = (amount * response.conversion_rates.IDR);
-          $('#results').text(`$ ${amount} USD is equal to ${final} IDR`);
-        } else if (usdTo === "EUR") {
-          let final = (amount * response.conversion_rates.EUR);
-          $('#results').text(`$ ${amount} USD is equal to ${final} EUR`);
-        } else if (usdTo === "MXN") {
-          let final = (amount * response.conversion_rates.IDR);
-          $('#results').text(`$ ${amount} USD is equal to ${final} MXN`);
-        } else if (usdTo === "CAD") {
-          let final = (amount * response.conversion_rates.CAD);
-          $('#results').text(`$ ${amount} USD is equal to ${final} CAD`);
-        }
+        let final = (amount * response.conversion_rates[`${usdTo}`]);
+        $('#results').text(`$ ${amount} USD is equal to ${final} ${usdTo}`);
       });
   });
 });
+
+// $('#results').text(`$ ${amount} USD is equal to ${final} DKK`);
+// } else if (usdTo === "IDR") {
+//   let final = (amount * response.conversion_rates.IDR);
+//   $('#results').text(`$ ${amount} USD is equal to ${final} IDR`);
+// } else if (usdTo === "EUR") {
+//   let final = (amount * response.conversion_rates.EUR);
+//   $('#results').text(`$ ${amount} USD is equal to ${final} EUR`);
+// } else if (usdTo === "MXN") {
+//   let final = (amount * response.conversion_rates.IDR);
+//   $('#results').text(`$ ${amount} USD is equal to ${final} MXN`);
+// } else if (usdTo === "CAD") {
+//   let final = (amount * response.conversion_rates.CAD);
+//   $('#results').text(`$ ${amount} USD is equal to ${final} CAD`);
+// } else {
+//   let final = response.conversion_rates.fakeerror;
+//   $('#results').text(`${final}`);
+// }
