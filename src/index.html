@@ -11,14 +11,8 @@
       <div class="row">
         <div class="col-5">
           <h5>Convert USD to:</h5>
-          <select class="form-control" id="convertTo">
-            <option value="DKK">Danish Krone</option>
-            <option value="IDR">Indonesian Rupiah</option>
-            <option value="EUR">Euro</option>
-            <option value="MXN">Mexican Peso</option>
-            <option value="CAD">Canadian Dollar</option>
-            <option value="MON">Monopoly Money</option>
-          </select>
+          <label for="convertTo">Convert USD to:</label>
+          <input id="convertTo" class="form-control" type="string" required/>
         </div>
         <div class="col-5">
           <label for="amount">Amount:</label>
@@ -35,3 +29,12 @@
   </div>
 </body>
 </html>
+<!-- 
+<select class="form-control" id="convertTo">
+  <option value="DKK">Danish Krone</option>
+  <option value="IDR">Indonesian Rupiah</option>
+  <option value="EUR">Euro</option>
+  <option value="MXN">Mexican Peso</option>
+  <option value="CAD">Canadian Dollar</option>
+  <option value="MON">Monopoly Money</option>
+</select> -->
