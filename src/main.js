@@ -4,13 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import Exchange from './js/exchange-service.js';
 
-// function convert() {
-//   let amount = $('#amount').val();
-//   let usdTo = $("select#convertTo").val();
-//   let final = (amount * response.conversion_rates.USD)
-//   $('#results').text(`$ ${amount} USD is equal to ${usdTo}. ${final}`);
-// }
-
 $(document).ready(function() {
   $('#exchangeForm').submit(function(event) {
     event.preventDefault();
@@ -18,9 +11,22 @@ $(document).ready(function() {
       .then(function(response) {
         let amount = parseInt($('#amount').val());
         let usdTo = $("select#convertTo").val();
-        let rate = response.conversion_rates.EUR;
-        let final = (amount * rate);
-        $('#results').text(`$ ${amount} USD is equal to ${final} ${usdTo}.`);
+        if (usdTo === "DKK") {
+          let final = (amount * response.conversion_rates.DKK);
+          $('#results').text(`$ ${amount} USD is equal to ${final} DKK`);
+        } else if (usdTo === "IDR") {
+          let final = (amount * response.conversion_rates.IDR);
+          $('#results').text(`$ ${amount} USD is equal to ${final} IDR`);
+        } else if (usdTo === "EUR") {
+          let final = (amount * response.conversion_rates.EUR);
+          $('#results').text(`$ ${amount} USD is equal to ${final} EUR`);
+        } else if (usdTo === "MXN") {
+          let final = (amount * response.conversion_rates.IDR);
+          $('#results').text(`$ ${amount} USD is equal to ${final} MXN`);
+        } else if (usdTo === "CAD") {
+          let final = (amount * response.conversion_rates.CAD);
+          $('#results').text(`$ ${amount} USD is equal to ${final} CAD`);
+        }
       });
   });
 });
