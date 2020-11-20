@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Currency Exchange Tool</title>
 </head>
 <body>
-  
+  <div class="container">
+    <form id="exchangeForm">
+      <div class="row">
+        <div class="col-5">
+          <h5>Convert USD to:</h5>
+          <select class="form-control" id="convertTo">
+            <option value="DKK">Danish Krone</option>
+            <option value="IDR">Indonesian Rupiah</option>
+            <option value="EUR">Euro</option>
+            <option value="MXN">Mexican Peso</option>
+            <option value="CAD">Canadian Dollar</option>
+          </select>
+        </div>
+        <div class="col-5">
+          <label for="amount">Amount:</label>
+          <input id="amount" class="form-control" min="0" type="number" required/>
+        </div>
+        <div class="col-2">
+          <button type="submit" class="btn btn-outline-dark">Convert!</button>
+        </div>
+      </div>
+    </form>
+    <div id="results">
+      <h1></h1>
+    </div>
+  </div>
 </body>
 </html>
