@@ -1,3 +1,25 @@
-#button {
+body {
+  background-color: #d4e09b;
+  color: #1b4332;
+}
+
+.navbar {
+  color: #1b4332;
+}
+#conversionResults {
   text-align: center;
+}
+
+#exchangeForm {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+button {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+a {
+  color: #1b4332;
+  font-weight: bold;
 }

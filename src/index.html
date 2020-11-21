@@ -6,6 +6,13 @@
   <title>Currency Exchange Tool</title>
 </head>
 <body>
+  <nav class="navbar navbar-light">
+    <h1 class="navbar-brand">Currency Converter</h1>
+  </nav>
+  <div class="container">
+    <h4 class="display">Heading somewhere?</h4>
+    <p>Convert values in USD to a variety of other currencies with the tool below. Simply input the currency code (i.e. CAD for Canadian Dollars, DKK for Danish Krone) for the destination country and then input the value of USD you'd like to convert. For a list of supported currencies, <a href="https://www.exchangerate-api.com/docs/supported-currencies" target="_blank"> click here.</a></p>
+  </div>
   <div class="container">
     <form id="exchangeForm">
       <h5>Convert USD to:</h5>
@@ -23,8 +30,8 @@
         <button type="submit" class="btn btn-outline-dark">Convert!</button>
       </div>
     </form>
-    <div id="results">
-      <h1></h1>
+    <div id="conversionResults">
+      <h3 class="display" id="results"></h3>
     </div>
   </div>
 </body>
