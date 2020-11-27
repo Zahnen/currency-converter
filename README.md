@@ -10,9 +10,6 @@ _This webpage was created as my independent project for my sixth week at Epicodu
 
 ## Setup/Installation Requirements
 
-### If you would like to run the webpage on GitHub Pages
-* [Click Here]()
-
 ### If you would like to run the webpage locally
 
 * _Open your git-capable command line program (I recommend Terminal on Mac or Git Bash on PC)_
